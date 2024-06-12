@@ -31,14 +31,39 @@
 # видів бензину. Вивести на екран порівняльну таблицю з вартістю подорожі на різних
 # видах палива.
 
-distance = int(input("Enter distance :: "))
-volume = float(input("Enter volume :: "))
+# distance = int(input("Enter distance :: "))
+# volume = float(input("Enter volume :: "))
 
-res = distance * (volume / 100)
-A95 = float(input("Enter price :: "))
-A92 = float(input("Enter price :: "))
-A86 = float(input("Enter price :: "))
+# res = distance * (volume / 100)
+# A95 = float(input("Enter price :: "))
+# A92 = float(input("Enter price :: "))
+# A86 = float(input("Enter price :: "))
 
-print('A95 \t :: \t {}'.format(res * A95))
-print('A92 \t :: \t {}'.format(res * A92))
-print('A86 \t :: \t {}'.format(res * A86))
+# print('A95 \t :: \t {}'.format(res * A95))
+# print('A92 \t :: \t {}'.format(res * A92))
+# print('A86 \t :: \t {}'.format(res * A86))
+
+
+#7360 -> 2
+#7360 -> 2 * 3600 / 60 -> 02
+# 2:122:7360
+
+# print(chr(9556) + chr(9552) * 10 + "Test" + chr(9552)*10 + chr(9559))
+# print(chr(9562) + chr(9552) * 20 + chr(9565))
+
+# 12:10:45  => 43845
+# 15:05:05  => 54305
+
+start_h = int(input("Enter h :: "))
+start_m = int(input("Enter m :: "))
+start_s = int(input("Enter s :: "))
+
+end_h = int(input("Enter h :: "))
+end_m = int(input("Enter m :: "))
+end_s = int(input("Enter s :: "))
+
+start_time = start_h * 3600 + start_m * 60 + start_s
+end_time = end_h * 3600 + end_m * 60 + end_s
+
+res_time = (end_time -start_time) // 60
+print("{} uah".format(res_time * 2))
