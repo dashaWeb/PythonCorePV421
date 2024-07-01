@@ -37,12 +37,22 @@
 # ділиться тільки на 1 і на саме себе без залишку; причому числа 1
 # і 2 за прості не вважаються).
 
-for numb in range(2,1001):
-    flag = True
-    for i in range(2, numb//2+1):
-        if numb % i == 0:
-            flag = False
-            break
-    if flag:
-        print(numb)
+# for numb in range(2,1001):
+#     flag = True
+#     for i in range(2, numb//2+1):
+#         if numb % i == 0:
+#             flag = False
+#             break
+#     if flag:
+#         print(numb)
 
+counter = 0
+for i in range(100,1000):
+    numb = i
+    a = numb % 10
+    numb//=10
+    b = numb%10
+    c= numb//10
+    if a != b and b != c:
+        print(i)
+        counter+=1
