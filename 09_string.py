@@ -2,7 +2,7 @@
 word = 'Length'
 
 # print(word[2])
-# word[2] = 'N'
+# word[2] = 'N' error
 # for i in range(0,256):
 #     print(chr(i), i, end='\t')
 #     if i % 15 == 0:
@@ -329,7 +329,7 @@ word = 'Length'
 # # for i in range(len(line)):
 # #     print(line[len(line)-1-i],end="") 
 
-# # print(line[-1::-1])
+# # print(line[::-1])
 # dig = 0
 # let = 0
 # for item in line:
@@ -340,5 +340,40 @@ word = 'Length'
 #         dig+=1
 # print('Letters :: ',let)    
 # print('Digits :: ',dig)    
+
 # print(line.count('r'))
+
+
 # print(line.replace('r','qqqqq'))
+# line = 'apple orange banana plum'
+# print(line.split(' ')[0])
+
+
+
+
+import string
+import random
+print('Lorem'.center(50))
+print('Lorem'.center(50,'*'))
+print('\tLorem\t  rr'.expandtabs(10))
+print('Lorem'.rjust(30,'*'))
+print('Lorem'.ljust(30,'='))
+print('Lomrem'.lstrip('Lo'))
+print('Lomrem'.rstrip('m'))
+print('mLomrmem'.strip('m'))
+print('L124'.zfill(10))
+
+print("ttest {0:3.2f}".format(2.36589))
+print("ttest {0:4d}".format(20))
+print("ttest {0:^10}".format(20))
+print("ttest {0:>10}".format(20))
+print("ttest {0:<10}!!!".format(20))
+
+print(string.ascii_letters)
+print(string.digits)
+print(string.punctuation)
+
+userLogin = ''.join(random.sample((string.ascii_lowercase),6))
+userPass = ''.join(random.sample((string.ascii_letters+string.digits+string.punctuation),8))
+print(userLogin)
+print(userPass)
