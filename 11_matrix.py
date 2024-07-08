@@ -60,3 +60,32 @@ min_ = min([min(row) for row in matrix])
 
 print(f'Max :: {max_}')
 print(f'Min :: {min_}')
+
+clone = []
+for row in matrix:
+    clone.append(row.copy())
+print(id(matrix), matrix, sep='\n')
+print()
+print(id(clone), clone, sep='\n')
+print('==========')
+clone[0][0] = 999
+print(id(matrix), matrix, sep='\n')
+print()
+print(id(clone), clone, sep='\n')
+
+for i in range(len(matrix)):
+    print(f'Origin :: {id(matrix[i])}; Clone :: {id(clone[i])}')
+
+
+matrix_3d = [
+    [
+        [1,2,3],
+        [4,5,8]
+    ],
+    [
+        [7,8,9]
+    ],
+    []
+
+]
+print(matrix_3d[0][1][1])
