@@ -74,24 +74,39 @@
 #     print(file.read())
 
 
-def readAllFile(url):
-    with open(url) as file:
-        return file.read()
+# def readAllFile(url):
+#     with open(url) as file:
+#         return file.read()
     
-print(readAllFile('17_file_/my_read.txt'))
+# print(readAllFile('17_file_/my_read.txt'))
 
-def writeAllLines(name,lines,mode = 'w'):
-    with open('17_file_/' + name + '.txt', mode) as file:
-        file.writelines(lines)
+# def writeAllLines(name,lines,mode = 'w'):
+#     with open('17_file_/' + name + '.txt', mode) as file:
+#         file.writelines(lines)
 
-writeAllLines('test_write',[
-    'Line 1 \n',
-    'Line 2 \n',
-    'Line 3 \n',
-])
+# writeAllLines('test_write',[
+#     'Line 1 \n',
+#     'Line 2 \n',
+#     'Line 3 \n',
+# ])
 
-writeAllLines('test_write',[
-    'Line 4 \n',
-    'Line 5 \n',
-    'Line 6 \n',
-],mode='a')
+# writeAllLines('test_write',[
+#     'Line 4 \n',
+#     'Line 5 \n',
+#     'Line 6 \n',
+# ],mode='a')
+
+
+url = r'res.txt'
+with open(url) as file:
+    lines = file.read()
+
+words = lines.split(' ')
+
+def writeWords(url, words):
+    with open(url,'w') as file:
+        for word in words:
+            if len(word)>=7:
+                file.write(word+'\n')
+
+writeWords(r'words.txt',words)
