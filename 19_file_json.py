@@ -59,11 +59,14 @@ import requests
 # currency = requests.get('https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=5')
 
 
-# currency = requests.get('https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=5').content
-# currency = json.loads(currency)
-# print(type(currency), currency)
-# print(type(currency[0]), currency[0])
-# print(type(currency[0]['sale']), currency[0]['sale'])
+currency = requests.get('https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=5').content
+currency = json.loads(currency)
+print(type(currency), currency)
+print(type(currency[0]), currency[0])
+print(type(currency[0]['sale']), currency[0]['sale'])
+
+usd = float(currency[0]['sale'])
+print(type(usd),usd)
 
 # import requests
 # currency = requests.get('https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=5').json()

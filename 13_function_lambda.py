@@ -46,6 +46,8 @@ print('List', end='\t\t :: ')
 printList(list_)
 
 def reverse_numb(x):
+    if x < 0:
+        return x
     return x * -1
 
 def double(x):
